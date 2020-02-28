@@ -12,9 +12,9 @@ public class TestHomework1 {
         Wall wall = new Wall(1);
         RunningTrack runningTrack = new RunningTrack(250);
 
-        Human human = new Human();
-        Cat cat = new Cat();
-        Robot robot = new Robot();
+        Human human = new Human("Юра", 2,300);
+        Cat cat = new Cat("Barsik", 10, 200);
+        Robot robot = new Robot("Robocop", 0, 2000);
 
         Obstacles[] obstacles = {wall, runningTrack};
         Participants[] participants = {human, cat, robot};
