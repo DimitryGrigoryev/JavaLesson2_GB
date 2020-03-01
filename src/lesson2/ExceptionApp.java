@@ -23,7 +23,7 @@ public class ExceptionApp {
 
     private static void justMethod() {
         try {
-            int a = 1;
+            int a = 0;
             int b = divide(a);
             System.out.println("Это сообщение не будет выведено в консоль");
             return;
