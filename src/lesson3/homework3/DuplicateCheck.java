@@ -30,8 +30,7 @@ public class DuplicateCheck {
     }
 
     private static Set<String> getStrings(LinkedList<String> newDataArray) {
-        Set<String> setDataArray = new TreeSet<>();
-        setDataArray.addAll(newDataArray);
+        Set<String> setDataArray = new TreeSet<>(newDataArray);
         System.out.println(setDataArray);
         return setDataArray;
     }
