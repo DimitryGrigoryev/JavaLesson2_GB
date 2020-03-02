@@ -1,7 +1,7 @@
 package lesson3;
 
-import java.util.*;
-import java.util.function.Function;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class SetExample {
 
@@ -21,6 +21,7 @@ public class SetExample {
 
         System.out.println("---------");
 
+
         Set<Person> personSet = new TreeSet<Person>();
 //        Set<Person> personSet = new TreeSet<Person>(Comparator.comparing(Person::getName));
 //        Set<Person> personSet = new TreeSet<Person>(Comparator.comparing(person -> person.getName()));
@@ -30,8 +31,8 @@ public class SetExample {
 //                return person.getName();
 //            }
 //        }));
-        Person oleg   = new Person("Oleg","Petrov", 27);
-        Person alexey = new Person("Alexey", "Petrov", 29);
+        Person oleg   = new Person("Petrov", "Oleg", 27);
+        Person alexey = new Person("Petrov", "Alexey", 29);
         personSet.add(oleg);
         personSet.add(alexey);
 

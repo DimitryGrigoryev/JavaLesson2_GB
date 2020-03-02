@@ -21,18 +21,18 @@ public class ArrayListExample {
 //        arrNew = null;
     }
 
-    private static void arrayListToArray() {
-        List<Integer> list = new ArrayList<>();
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        list.addAll(List.of(1, 2));
-        Integer[] arr = new Integer[list.size()];
-        list.toArray(arr);
-        List<Integer> arr2 = Arrays.asList(arr);
+//    private static void arrayListToArray() {
+//        List<Integer> list = new ArrayList<>();
+//        list.add(1);
+//        list.add(2);
+//        list.add(3);
+//        list.addAll(List.of(1, 2));
+//        Integer[] arr = new Integer[list.size()];
+//        list.toArray(arr);
+//        List<Integer> arr2 = Arrays.asList(arr);
 //        List<Integer> arr3 = new ArrayList(arr);
 //        arr = list.toArray(new Integer[0]);
-    }
+//    }
 
     private static void arrayListExample() {
         LinkedList<String> newDataName = new LinkedList<>();
@@ -67,10 +67,12 @@ public class ArrayListExample {
         data.add(1);
         data.add(2);
         data.add(3);
-        data.remove(1);
-        System.out.println(data);
+//        data.remove(1);
 
         data.sort(Comparator.naturalOrder());
+        System.out.println(data);
+        data.sort(Comparator.reverseOrder());
+        System.out.println(data);
 
 //        List<String> anotherData = new ArrayList<>(newDataName);
         List<String> anotherData = new ArrayList<>(5);
