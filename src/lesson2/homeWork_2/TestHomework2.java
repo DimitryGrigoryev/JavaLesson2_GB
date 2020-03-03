@@ -4,6 +4,7 @@ public class TestHomework2 {
     public static void main(String[] args) {
         int SIZE = 4;
         int SUM = 0;
+
         String[][] testArray1 = {{"1", "11", "1", "1"}, {"1", "1", "1", "1"}, {"1", "1", "1", "1"}, {"1", "1", "1", "1"}};
         System.out.println("testArray1");
         doSum(SIZE, SUM, testArray1);
@@ -24,7 +25,7 @@ public class TestHomework2 {
         try {
             sumArray(SIZE, testArray1, SUM);
         } catch (MyArraySizeException | MyArrayDataException e) {
-            System.out.println("Error");
+            System.out.println(e.getMessage());
         } finally {
             System.out.println("Finally block");
         }
@@ -38,35 +39,32 @@ public class TestHomework2 {
     private static void checkDataAndSum(String[][] testArray1, int SUM) throws MyArrayDataException {
         for (int i = 0; i < testArray1.length; i++) {
             for (int j = 0; j < testArray1[i].length; j++) {
-                int string1 = checkData(testArray1[i][j], i , j );
+                int string1 = checkData(testArray1[i][j], i, j);
                 SUM = SUM + string1;
             }
         }
+        System.out.println("Данные в ячейках верные!");
         System.out.println("Сумма по всем элементам массива = " + SUM);
     }
 
-    private static int checkData(String s,int i,int j) throws MyArrayDataException {
+    private static int checkData(String s, int i, int j) throws MyArrayDataException {
         int string1;
         try {
             string1 = Integer.parseInt(s.trim());
         } catch (NumberFormatException e) {
-            System.out.printf("Неверный формат данный в ячейке [%d][%d]\n", (i + 1), (j + 1));
-            throw new MyArrayDataException();
+            throw new MyArrayDataException("Неверный формат данный в ячейке [" + (i + 1) + "][" + (j + 1) + "].");
         }
-        System.out.println("Данные в ячейках верные!");
         return string1;
     }
 
     private static void checkSizeArray(int SIZE, String[][] testArray1) throws MyArraySizeException {
-        if (testArray1.length < SIZE) {
-            System.out.println("Размер по количеству строк не тот");
-            throw new MyArraySizeException();
+        if (testArray1.length != SIZE) {
+            throw new MyArraySizeException("Размер по количеству строк не тот");
         } else System.out.println("По количеству строк ОК!");
 
         for (String[] strings : testArray1) {
-            if (strings.length < SIZE) {
-                System.out.println("Размер по длинне строк не тот");
-                throw new MyArraySizeException();
+            if (strings.length != SIZE) {
+                throw new MyArraySizeException("Размер по длинне строк не тот");
             }
         }
         System.out.println("По длинне строк ОК!");
