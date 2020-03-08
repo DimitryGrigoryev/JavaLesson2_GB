@@ -19,6 +19,10 @@ public class TestHomework2 {
         String[][] testArray4 = {{"1", "1", "1", "1"}, {"1", "1", "1", "1"}, {"1", "1", "1", "1"}, {"1", "1", "C", "1"}};
         System.out.println("testArray4");
         doSum(SIZE, SUM, testArray4);
+
+        String[][] testArray5 = {{"1", "1", "1", "1"}, {"1", "1", "1", "1"}, {"1", "1", "1", "1"}, {"1", "1", "1", "1"}, {"1", "1", "C", "1"}};
+        System.out.println("testArray5");
+        doSum(SIZE, SUM, testArray5);
     }
 
     private static void doSum(int SIZE, int SUM, String[][] testArray1) {
