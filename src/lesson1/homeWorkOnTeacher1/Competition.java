@@ -1,7 +1,7 @@
 package lesson1.homeWorkOnTeacher1;
 
-import lesson1.homework.obstacle.Obstacle;
-import lesson1.homework.participant.Participant;
+import lesson1.homeWorkOnTeacher1.obstacle.Obstacle;
+import lesson1.homeWorkOnTeacher1.participant.Participant;
 
 import java.util.LinkedList;
 import java.util.List;

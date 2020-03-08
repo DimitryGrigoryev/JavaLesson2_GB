@@ -1,6 +1,6 @@
 package lesson1.homeWorkOnTeacher1.obstacle;
 
-import lesson1.homework.participant.Participant;
+import lesson1.homeWorkOnTeacher1.participant.Participant;
 
 public class Track implements Obstacle {
 

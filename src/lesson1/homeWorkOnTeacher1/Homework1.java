@@ -1,11 +1,11 @@
 package lesson1.homeWorkOnTeacher1;
 
-import lesson1.homework.obstacle.Track;
-import lesson1.homework.obstacle.Wall;
-import lesson1.homework.participant.Cat;
-import lesson1.homework.participant.Participant;
-import lesson1.homework.participant.Person;
-import lesson1.homework.participant.Robot;
+import lesson1.homeWorkOnTeacher1.obstacle.Track;
+import lesson1.homeWorkOnTeacher1.obstacle.Wall;
+import lesson1.homeWorkOnTeacher1.participant.Cat;
+import lesson1.homeWorkOnTeacher1.participant.Participant;
+import lesson1.homeWorkOnTeacher1.participant.Person;
+import lesson1.homeWorkOnTeacher1.participant.Robot;
 
 import java.util.Random;
 
