@@ -1,7 +1,5 @@
 package lesson5.thread;
 
-import com.sun.webkit.ThemeClient;
-
 public class TestCreateThread {
 
     static class MyRunnableClass implements Runnable {
@@ -43,11 +41,11 @@ public class TestCreateThread {
 
 //        thread1.start();
         thread2.start();
-//        while (thread1.isAlive()) {
-//            System.out.println("Поток 1 живой");
-//            Thread.sleep(10);
-//        }
-//        System.out.println("Поток 1 мертвый! Прерываем 2 поток");
+        while (thread1.isAlive()) {
+            System.out.println("Поток 1 живой");
+            Thread.sleep(10);
+        }
+        System.out.println("Поток 1 мертвый! Прерываем 2 поток");
         Thread.sleep(250);
         thread2.interrupt();
 

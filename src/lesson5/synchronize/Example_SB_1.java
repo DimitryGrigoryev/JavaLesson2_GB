@@ -27,7 +27,7 @@ public class Example_SB_1 {
     }
 
     public void method2() {
-        synchronized (this) {
+         synchronized (this) {
             System.out.println("start M2");
             for (int i = 0; i < 10; i++) {
                 System.out.println(i);

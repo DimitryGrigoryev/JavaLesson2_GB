@@ -11,6 +11,7 @@ public class ThreadExample {
 //                print(10);
 //            }
 //        });
+//        Thread thread = new Thread(() -> print(10));
         System.out.println(Thread.currentThread().getName());
         count = 1000;
 //        printCount();
@@ -20,7 +21,7 @@ public class ThreadExample {
         thread1.start();
         thread2.start();
 
-        thread1.join();
+        thread1.join(); //дождаться выполнения потока
         thread2.join();
 
         System.out.println("Final value is " + count);
@@ -40,6 +41,6 @@ public class ThreadExample {
                 e.printStackTrace();
             }
         }
-//        System.out.println(Thread.currentThread().getName() + ": "+ count);
+        System.out.println(Thread.currentThread().getName() + ": "+ count);
     }
 }
