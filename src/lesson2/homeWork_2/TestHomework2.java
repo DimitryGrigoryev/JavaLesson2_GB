@@ -1,33 +1,34 @@
 package lesson2.homeWork_2;
 
 public class TestHomework2 {
+    private static final int SIZE = 4;
+    private static int SUM = 0;
+
     public static void main(String[] args) {
-        int SIZE = 4;
-        int SUM = 0;
 
         String[][] testArray1 = {{"1", "11", "1", "1"}, {"1", "1", "1", "1"}, {"1", "1", "1", "1"}, {"1", "1", "1", "1"}};
         System.out.println("testArray1");
-        doSum(SIZE, SUM, testArray1);
+        doSum(testArray1);
         String[][] testArray2 = {{"1", "11", "1", "1"}, {"1", "1", "1", "1"}, {"1", "1", "1"}, {"1", "1", "1", "1"}};
         System.out.println("testArray2");
-        doSum(SIZE, SUM, testArray2);
+        doSum(testArray2);
 
         String[][] testArray3 = {{"1", "11", "1", "1"}, {"1", "1", "1", "1"}, {"1", "1", "1", "1"}};
         System.out.println("testArray3");
-        doSum(SIZE, SUM, testArray3);
+        doSum(testArray3);
 
         String[][] testArray4 = {{"1", "1", "1", "1"}, {"1", "1", "1", "1"}, {"1", "1", "1", "1"}, {"1", "1", "C", "1"}};
         System.out.println("testArray4");
-        doSum(SIZE, SUM, testArray4);
+        doSum(testArray4);
 
         String[][] testArray5 = {{"1", "1", "1", "1"}, {"1", "1", "1", "1"}, {"1", "1", "1", "1"}, {"1", "1", "1", "1"}, {"1", "1", "C", "1"}};
         System.out.println("testArray5");
-        doSum(SIZE, SUM, testArray5);
+        doSum(testArray5);
     }
 
-    private static void doSum(int SIZE, int SUM, String[][] testArray1) {
+    private static void doSum(String[][] testArray1) {
         try {
-            sumArray(SIZE, testArray1, SUM);
+            sumArray(testArray1);
         } catch (MyArraySizeException | MyArrayDataException e) {
             System.out.println(e.getMessage());
         } finally {
@@ -35,12 +36,12 @@ public class TestHomework2 {
         }
     }
 
-    private static void sumArray(int SIZE, String[][] testArray1, int SUM) {
-        checkSizeArray(SIZE, testArray1);
-        checkDataAndSum(testArray1, SUM);
+    private static void sumArray(String[][] testArray1) {
+        checkSizeArray(testArray1);
+        checkDataAndSum(testArray1);
     }
 
-    private static void checkDataAndSum(String[][] testArray1, int SUM) throws MyArrayDataException {
+    private static void checkDataAndSum(String[][] testArray1) throws MyArrayDataException {
         for (int i = 0; i < testArray1.length; i++) {
             for (int j = 0; j < testArray1[i].length; j++) {
                 int string1 = checkData(testArray1[i][j], i, j);
@@ -61,7 +62,7 @@ public class TestHomework2 {
         return string1;
     }
 
-    private static void checkSizeArray(int SIZE, String[][] testArray1) throws MyArraySizeException {
+    private static void checkSizeArray(String[][] testArray1) throws MyArraySizeException {
         if (testArray1.length != SIZE) {
             throw new MyArraySizeException("Размер по количеству строк не тот");
         } else System.out.println("По количеству строк ОК!");
