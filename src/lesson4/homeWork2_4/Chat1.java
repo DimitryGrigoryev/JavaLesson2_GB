@@ -4,13 +4,6 @@ import javax.swing.*;
 
 public class Chat1 {
     public static void main(String[] args) {
-//        SwingUtilities.invokeLater(new Runnable() {
-//            @Override
-//            public void run() {
-//                new MyWindow();
-//            }
-//        });
-//        SwingUtilities.invokeLater(() -> new MyWindow());
         SwingUtilities.invokeLater(ChatWindow::new);
         System.out.println("Bye main!");
     }
@@ -23,5 +16,4 @@ class ChatWindow extends JFrame {
         setBounds(300, 300, 600, 600);
         setVisible(true);
     }
-
 }
